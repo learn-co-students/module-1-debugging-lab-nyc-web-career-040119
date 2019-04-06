@@ -1,3 +1,5 @@
+require 'pry'
+
 class Person
   attr_accessor :name, :candy_lover
 
@@ -23,7 +25,12 @@ class Person
       "Aw sweet, this cat loves them some candy!"
     else
       10.times do
-        "not a ballin candy lover"
+         puts "not a ballin candy lover"
+      end
     end
   end
 end
+
+jacob = Person.new("Jacob",false)
+jacob.ballin_candy_lover?
+binding.pry
