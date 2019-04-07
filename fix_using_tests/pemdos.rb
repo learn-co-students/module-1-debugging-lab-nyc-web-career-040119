@@ -1,7 +1,12 @@
 def snake_it_up(string)
   if string[0] == "s"
-  10 * "s" + string
+    str = ""
+    s = "s"
+    (1..10).each do |i|
+      str += s
+    end
   else
-  string
+    string
   end
+  str + string
 end
