@@ -1,3 +1,5 @@
+require "pry"
+
 def generate_star_date
   (rand(100000) + 400000) / 10.0
 end
@@ -11,8 +13,13 @@ def crew
   ["Geordi", "Data", "Worf", "William", "Beverly", "Deanna"]
 end
 
-def greet_crew (crew)
-  crew.each {|crew_member| "Hello #{crew_member}."}
+def greet_crew (crew_array)
+  #crew.each {|crew_member| "Hello #{crew_member}."}
+  #crew
+  crew.map do |crew_member|
+    "Hello #{crew_member}."
+  end
+  #binding.pry
 end
 
 def engage
